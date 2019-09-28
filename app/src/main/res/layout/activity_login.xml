@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--登录界面-->
+<!--这里的布局放置是：1个ImageView控件，用于显示app的logo；2个EditText控件，用于输入用户名、密码；1个Button控件为登录按钮；3个TextView控件，分别为app标题、用于找回密码和立即注册-->
+<!--修改 activity_register.xml 为 LinearLayout 布局-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_login"
+    android:background="#FFFFFF"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <!--标题栏-->
+    <!--<include layout="@layout/activity_main_title_bar"></include>-->
+    <!--显示logo，记得加入id iv_head -->
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:srcCompat="@drawable/film" />
+    <!--标题-->
+    <TextView
+        android:id="@+id/tv_title"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="流动放映App"
+        android:textSize="25dp" />
+    <!--用户名输入框-->
+    <EditText
+        android:id="@+id/et_user_name"
+        android:background="@drawable/user_bg"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="用户名"
+        android:textColor="#909399" />
+    <!--密码输入框-->
+    <EditText
+        android:id="@+id/et_psw"
+        android:background="@drawable/password_bg"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:text="密码"
+        android:textColor="#909399"/>
+    <!--登录按钮-->
+    <Button
+        android:id="@+id/btn_login"
+        android:background="@color/button_bg"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:text="登录"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp">
+        <!--找回密码-->
+        <TextView
+            android:id="@+id/tv_find_psw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:text="找回密码？"
+            android:textColor="#3F51B5"
+            android:textSize="14sp"/>
+        <!--立即注册-->
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:text="立即注册"
+            android:textColor="#3F51B5"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+
+</LinearLayout>
